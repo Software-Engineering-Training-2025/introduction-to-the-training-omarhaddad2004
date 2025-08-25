@@ -14,8 +14,14 @@ public class Calculator {
         } else if (op == Operator.MULTIPLY) {
             return a * b;
         } else if (op == Operator.DIVIDE) {
-            // throw an ArithmeticException when b == 0
-            return a / b;
+            if (b==0){
+                throw new ArithmeticException("cant be zero");
+            }
+            else {
+                return a / b;
+
+            }
+
         } else {
             throw new IllegalArgumentException("Unknown operator");
         }
